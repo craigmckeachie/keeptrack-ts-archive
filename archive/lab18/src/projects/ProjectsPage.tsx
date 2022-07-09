@@ -6,7 +6,7 @@ import ProjectList from './ProjectList';
 function ProjectsPage() {
   const [projects, setProjects] = useState<Project[]>([]);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(undefined);
+  const [error, setError] = useState<string | undefined>(undefined);
   const [currentPage, setCurrentPage] = useState(1);
 
   // Approach 1: using promise then
@@ -24,7 +24,9 @@ function ProjectsPage() {
   //     })
   //     .catch((e) => {
   //       setLoading(false);
-  //       setError(e.message);
+  //       if (e instanceof Error) {
+  //         setError(e.message);
+  //       }
   //     });
   // }, [currentPage]);
 
@@ -40,7 +42,9 @@ function ProjectsPage() {
           setProjects((projects) => [...projects, ...data]);
         }
       } catch (e) {
-        setError(e.message);
+        if (e instanceof Error) {
+          setError(e.message);
+        }
       } finally {
         setLoading(false);
       }

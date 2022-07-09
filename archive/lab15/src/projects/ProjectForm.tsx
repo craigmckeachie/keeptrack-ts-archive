@@ -18,10 +18,6 @@ function ProjectForm({
     onSave(project);
   };
 
-  useEffect(() => {
-    console.log(project === initialProject);
-  }, [initialProject, project]);
-
   const handleChange = (event: any) => {
     const { type, name, value, checked } = event.target;
     // if input type is checkbox use checked
