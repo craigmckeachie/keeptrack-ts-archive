@@ -3,6 +3,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { AppState } from '../state';
 import ProjectList from './ProjectList';
 import { loadProjects } from './state/projectActions';
+import { AnyAction } from 'redux';
+import { ThunkDispatch } from 'redux-thunk';
+import { ProjectState } from './state/projectTypes';
 
 function ProjectsPage() {
   const loading = useSelector(
@@ -17,7 +20,7 @@ function ProjectsPage() {
   const currentPage = useSelector(
     (appState: AppState) => appState.projectState.page
   );
-  const dispatch = useDispatch();
+  const dispatch = useDispatch<ThunkDispatch<ProjectState, any, AnyAction>>();
 
   useEffect(() => {
     dispatch<any>(loadProjects(1));
