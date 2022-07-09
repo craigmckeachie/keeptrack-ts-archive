@@ -178,11 +178,10 @@ find ./archive/lab09/public -name "index.html" -type f -delete
 find ./archive/lab09 -name public -type d -delete
 rm -rf ./archive/lab22 
 mkdir ./archive/lab22 
-# find ./archive/lab09/public -name "index.html" -type f -delete
-
-# find ./archive/*/api
 echo "delete extra api directories manually"
-echo "delete lab01 files"
 echo "completed"
 
+
+# find ./archive/lab09/public -name "index.html" -type f -delete
+# find ./archive/*/api
 

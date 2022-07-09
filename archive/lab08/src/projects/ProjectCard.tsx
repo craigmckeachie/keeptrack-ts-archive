@@ -11,7 +11,7 @@ interface ProjectCardProps {
 
 function ProjectCard(props: ProjectCardProps) {
   const { project } = props;
-  
+
   return (
     <div className="card">
       <img src={project.imageUrl} alt={project.name} />
