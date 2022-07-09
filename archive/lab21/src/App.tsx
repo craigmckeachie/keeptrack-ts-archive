@@ -1,7 +1,7 @@
 import React from 'react';
 import {
   BrowserRouter as Router,
-  Switch,
+  Routes,
   Route,
   NavLink,
 } from 'react-router-dom';
@@ -27,11 +27,11 @@ function App() {
         </NavLink>
       </header>
       <div className="container">
-        <Switch>
+        <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/projects" element={<ProjectsPage />} />
           <Route path="/projects/:id" element={<ProjectPage />} />
-        </Switch>
+        </Routes>
       </div>
     </Router>
   );

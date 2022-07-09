@@ -39,11 +39,22 @@ function delay(ms: number) {
   };
 }
 
+
+function convertToProjectModels(data: any[]): Project[] {
+  let projects: Project[] = data.map(convertToProjectModel);
+  return projects;
+}
+
+function convertToProjectModel(item: any): Project {
+  return new Project(item);
+}
+
 const projectAPI = {
   get(page = 1, limit = 20) {
     return fetch(`${url}?_page=${page}&_limit=${limit}&_sort=name`)
       .then(checkStatus)
       .then(parseJSON)
+      .then(convertToProjectModels)
       .catch((error: TypeError) => {
         console.log('log client error ' + error);
         throw new Error(
