@@ -173,8 +173,11 @@ find ./archive -name "package.json" -type f -delete
 
 rm -rf ./archive/lab01 
 mkdir ./archive/lab01
+find ./archive/lab08/src -name "index.tsx" -type f -delete
 find ./archive/lab09/public -name "index.html" -type f -delete
-find ./archive/lab09 -name public -type d -delete 
+find ./archive/lab09 -name public -type d -delete
+rm -rf ./archive/lab22 
+mkdir ./archive/lab22 
 # find ./archive/lab09/public -name "index.html" -type f -delete
 
 # find ./archive/*/api

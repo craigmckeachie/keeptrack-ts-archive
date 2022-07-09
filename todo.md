@@ -1,5 +1,11 @@
-[] - lab14 was commited at lab13, rename lab13 to lab14 branch, start at lab12 and recreate lab13 following directions
-[] lab20 convert is added, add to lab18 and update TypeScript directions
+[/] - lab14 was commited at lab13, start at lab12 and recreate lab13 following directions
+
+- delete lab13 local (TODO) need to delete remotely
+- started with lab12, branched to lab13.1, then followed directons for lab13
+- push lab13.1 to remote? No need.
+- todo- rename lab13.1 to lab13 (local and remote)
+
+[x] - lab20 convert is added, add to lab18 and update TypeScript directions
 
 ```
 function convertToProjectModels(data: any[]): Project[] {
