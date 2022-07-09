@@ -6,13 +6,18 @@
   # run prettier: 
   # npx prettier --write .
   # chmod 777 create-branches.sh
-  # rename keeptrack-ts to keeptrack-ts-17 
-      # https://stackoverflow.com/a/16602311/48175
+  # rename directory keeptrack-ts to keeptrack-ts-17
+  # rename keeptrack-ts to keeptrack-ts-17 on Github.com
+  # run this command to point remote origin to new url
+  # `git remote set-url origin https://github.com/craigmckeachie/keeptrack-ts-17`
+      # Reference  https://stackoverflow.com/a/16602311/48175
+
+
   # create keeptrack-ts: npx create-react-app keeptrack-ts --use-npm
   # init repo and publish as public repo on github
-  # run this scrip to create branches
-  # create script to test branches
-  # test branches
+  # run this script to create branches
+  # create script to verify branches
+  # verify branches
 
 
   cp -r ~/Documents/git/react/keeptrack-ts-archive/lab01/* ~/Documents/git/react/keeptrack-ts
@@ -55,7 +60,6 @@
   cp -r ~/Documents/git/react/keeptrack-ts-archive/lab06/* ~/Documents/git/react/keeptrack-ts
   cd ~/Documents/git/react/keeptrack-ts
   git checkout -b lab06
-  npm install prop-types
   git add .
   git commit -m "lab06"
   git push --set-upstream origin lab06
@@ -242,6 +246,7 @@
   git push --set-upstream origin lab21.1
 
 
+  # currently do not have archive of auth lab so this is commented out
   # git checkout lab22  
   # cp -r ~/Documents/git/react/keeptrack-ts-archive/labauth/* ~/Documents/git/react/keeptrack-ts
   # cd ~/Documents/git/react/keeptrack-ts
