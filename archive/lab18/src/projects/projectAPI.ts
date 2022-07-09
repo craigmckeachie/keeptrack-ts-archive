@@ -1,3 +1,4 @@
+import { Project } from './Project';
 const baseUrl = 'http://localhost:4000';
 const url = `${baseUrl}/projects`;
 
@@ -38,7 +39,6 @@ function delay(ms: number) {
     return new Promise((resolve) => setTimeout(() => resolve(x), ms));
   };
 }
-
 
 function convertToProjectModels(data: any[]): Project[] {
   let projects: Project[] = data.map(convertToProjectModel);

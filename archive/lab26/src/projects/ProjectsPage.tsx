@@ -1,6 +1,3 @@
-import React, { useEffect, useState } from 'react';
-import { Project } from './Project';
-import { projectAPI } from './projectAPI';
 import { useProjects } from './projectHooks';
 import ProjectList from './ProjectList';
 

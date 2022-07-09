@@ -12,9 +12,9 @@
   # `git remote set-url origin https://github.com/craigmckeachie/keeptrack-ts-17`
       # Reference  https://stackoverflow.com/a/16602311/48175
 
-
-  # create keeptrack-ts: npx create-react-app keeptrack-ts --template typescript --use-npm
+  # when doing the 2nd to nth time...delete keeptrack-ts repository on github.com
   # create keeptrack-ts on github.com- new repository
+  # create keeptrack-ts: npx create-react-app keeptrack-ts --template typescript --use-npm
   # set remote origin to new repository `git remote add origin https://github.com/craigmckeachie/keeptrack-ts.git`
   # run this script to create branches
   # create script to verify branches

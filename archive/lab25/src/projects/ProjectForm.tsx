@@ -2,6 +2,9 @@ import React, { SyntheticEvent, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { Project } from './Project';
 import { saveProject } from './state/projectActions';
+import { ThunkDispatch } from 'redux-thunk';
+import { ProjectState } from './state/projectTypes';
+import { AnyAction } from 'redux';
 
 interface ProjectFormProps {
   project: Project;
@@ -15,7 +18,8 @@ function ProjectForm({ project: initialProject, onCancel }: ProjectFormProps) {
     description: '',
     budget: '',
   });
-  const dispatch = useDispatch();
+  const dispatch = useDispatch<ThunkDispatch<ProjectState, any, AnyAction>>();
+
   const handleSubmit = (event: SyntheticEvent) => {
     event.preventDefault();
     if (!isValid()) return;
