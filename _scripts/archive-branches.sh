@@ -92,7 +92,7 @@
     git archive --output=./archive/lab27.zip lab27 $(git diff --diff-filter=ACMRTUXB --name-only lab26 lab27)
 
     git checkout testing
-    git archive --output=./archive/testing.zip testing1 $(git diff --diff-filter=ACMRTUXB --name-only lab25 testing1)
+    git archive --output=./archive/testing.zip testing $(git diff --diff-filter=ACMRTUXB --name-only lab25 testing)
 
     git checkout redux
     git archive --output=./archive/redux.zip redux $(git diff --diff-filter=ACMRTUXB --name-only lab22 redux)
