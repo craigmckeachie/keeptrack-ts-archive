@@ -14,6 +14,7 @@
 
   # when doing the 2nd to nth time...delete keeptrack-ts repository on github.com
   # create keeptrack-ts on github.com- new repository
+  # delete keeptrack-ts directory
   # create keeptrack-ts: npx create-react-app keeptrack-ts --template typescript --use-npm
   # set remote origin to new repository `git remote add origin https://github.com/craigmckeachie/keeptrack-ts.git`
   # run this script to create branches
@@ -229,9 +230,10 @@
   cp -r ~/Documents/git/react/keeptrack-ts-archive/archive/testing/* ~/Documents/git/react/keeptrack-ts
   cd ~/Documents/git/react/keeptrack-ts
   git checkout -b testing
-  npm i react-test-renderer --save-dev
+  npm i react-test-renderer --save-dev @types/react-test-renderer
   npm install msw --save-dev
   npm install redux-mock-store @types/redux-mock-store --save-dev
+  npm install @testing-library/user-event@14
   read -t 5 -p "I am going to wait for 5 seconds only ..."
   git add .
   git commit -m "testing"
